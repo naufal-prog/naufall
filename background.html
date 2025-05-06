@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian di HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Tambahkan wallpaper keren */
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?technology,abstract'); /* Wallpaper dari Unsplash */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white; /* Agar teks terlihat lebih jelas */
+        }
+
+        /* Efek transparan pada container */
+        .container {
+            background: rgba(0, 0, 0, 0.7); /* Efek transparan hitam */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Desain kartu */
+        .card {
+            width: 18rem;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.9); /* Warna kartu dengan efek transparan */
+            color: black; /* Warna teks kartu */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Pencarian Produk</h2>
+        <input type="text" id="searchInput" class="form-control mb-3" placeholder="Cari produk..." onkeyup="searchFunction()">
+        
+        <div class="row" id="productList">
+            <div class="col-md-4 product-card" data-name="Realme C63">
+                <div class="card">
+                    <img src="image/Desain tanpa judul (1).png" class="card-img-top" alt="Realme C63">
+                    <div class="card-body">
+                        <h5 class="card-title">Realme C63</h5>
+                        <p class="card-text">HP Realme terbaru dengan fitur canggih.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card" data-name="Realme C65">
+                <div class="card">
+                    <img src="image/Desain tanpa judul (1).png" class="card-img-top" alt="Realme C65">
+                    <div class="card-body">
+                        <h5 class="card-title">Realme C65</h5>
+                        <p class="card-text">Performa handal dengan desain modern.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 product-card" data-name="Realme Note 50">
+                <div class="card">
+                    <img src="image/Desain tanpa judul (1).png" class="card-img-top" alt="Realme Note 50">
+                    <div class="card-body">
+                        <h5 class="card-title">Realme Note 50</h5>
+                        <p class="card-text">Layar luas dan baterai tahan lama.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p id="noResults" class="text-center text-danger mt-3 d-none">Produk tidak ditemukan</p>
+    </div>
+
+    <script>
+        function searchFunction() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let products = document.querySelectorAll(".product-card");
+            let found = false;
+
+            products.forEach(product => {
+                let name = product.getAttribute("data-name").toLowerCase();
+                if (name.includes(input)) {
+                    product.classList.remove("d-none");
+                    found = true;
+                } else {
+                    product.classList.add("d-none");
+                }
+            });
+
+            document.getElementById("noResults").classList.toggle("d-none", found);
+        }
+    </script>
+</body>
+</html>

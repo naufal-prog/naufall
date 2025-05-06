@@ -1,0 +1,5 @@
+.card-img-top {
+  width: 100%; /* Agar gambar memenuhi lebar kartu */
+  height: 200px; /* Tinggi gambar seragam */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
