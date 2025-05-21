@@ -1,0 +1,60 @@
+
+  /* Styling untuk Card */
+  .card {
+    border: none;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: #fff; /* Background putih */
+    margin-bottom: 20px; /* Jarak bawah antar card */
+  }
+
+  .card:hover {
+    transform: translateY(-10px); /* Card akan naik saat dihover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Shadow lebih kuat saat hover */
+  }
+
+  /* Styling gambar pada card */
+  .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover; /* Agar gambar mengisi area secara proporsional */
+    height: 200px; /* Atur tinggi gambar */
+    margin-bottom: 15px; /* Memberikan jarak antara gambar dan teks */
+  }
+
+  /* Styling untuk body card */
+  .card-body {
+    padding: 1.5rem; /* Tambahkan padding untuk jarak antara konten dan tepi card */
+    text-align: center;
+  }
+
+  /* Styling untuk judul card */
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px; /* Jarak antara judul dan teks */
+  }
+
+  /* Styling untuk teks card */
+  .card-text {
+    font-size: 0.9rem;
+    color: #555;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+  }
+
+  /* Styling untuk tombol */
+  .btn {
+    background-color: #0f0c29;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #302b63; /* Warna tombol saat hover */
+  }
+

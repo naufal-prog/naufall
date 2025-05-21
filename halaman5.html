@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pencarian di HTML</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="">
+
+<style>
+  .product-card .card {
+    background: rgba(0, 0, 0, 0.6); /* Lebih gelap agar teks putih terlihat */
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    color: #fff; /* Teks putih */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .product-card img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .product-card .card-body {
+    padding: 1rem;
+  }
+
+  .product-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .product-card .card-text {
+    font-size: 0.95rem;
+    color: #eee;
+    opacity: 0.9;
+  }
+</style>
+
     <style>
         .card {
             width: 18rem;
@@ -13,15 +54,21 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-         
-          <a href="index.html" ><strong></strong> kembali ke halaman </a>
-
-          <form class="d-flex">
-            
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container">
+          <!-- Kiri atas: Link ke halaman5 -->
+          <a class="navbar-brand text-white" href="index.html">Ke Halaman</a>
           
-          </form>
+      
+          <!-- Tombol toggle (untuk mobile) -->
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Kanan: Tombol TikTok -->
+          
         </div>
       </nav>
     <div class="container mt-4">
@@ -86,6 +133,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Realme Note 50</h5>
                         <p class="card-text">Layar luas dan baterai tahan lama jshgjfdmshgf,sdhbjksdbhfmsdhjkm.</p>
+                        <a href="realmec50.html" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
